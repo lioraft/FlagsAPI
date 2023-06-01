@@ -30,7 +30,7 @@ def request_image_page():
     user_query_for_category = str(request.args.get('category'))
     user_query_for_image = str(request.args.get('image'))
     # /user/?category=CATEGORY_NAME&image=IMAGE_NAME
-    image = f"https://raw.githubusercontent.com/lioraft/FlagsAndLogosAPI/main/resources/{user_query_for_category}/{user_query_for_image}.png" # get the image
+    image = f"https://raw.githubusercontent.com/lioraft/FlagsLogosAPI/main/resources/{user_query_for_category}/{user_query_for_image}.png" # get the image
     data = { 'Message': f'Got user request for {user_query_for_image} of {user_query_for_category} category successfully', 'Content': image}
     return json.dumps(data) # return the image as json
 

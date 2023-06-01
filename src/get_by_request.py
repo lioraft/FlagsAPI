@@ -1,7 +1,7 @@
 import requests
 
 # my resources repo
-repoURL = f"https://api.github.com/repos/lioraft/FlagsAndLogosAPI/contents/resources"
+repoURL = f"https://api.github.com/repos/lioraft/FlagsLogosAPI/contents/resources"
 
 # get all flags and logos of certain category
 def getAllImagesOfCategory(category):
