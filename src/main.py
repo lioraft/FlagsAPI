@@ -23,9 +23,11 @@ def request_category_page():
     if response.status_code == 200:
         contents = response.json() # get the contents of the response
         png_files = [content["name"] for content in contents if content["name"].lower().endswith(".png")] # get the png files
+        url = f"https://raw.githubusercontent.com/lioraft/FlagsAPI/main/resources/{user_query}/"  # add prefix of url of raw github content
+        modified_files = [url + file for file in png_files]
     else:
-        png_files = (f"Error: {response.status_code}")
-    data = {'Message': f'Got user request for {user_query} category successfully', 'Content': png_files}
+        modified_files = (f"Error: {response.status_code}")
+    data = {'Message': f'Got user request for {user_query} category successfully', 'Content': modified_files}
     return json.dumps(data) # return the images as json
 
 # Request page for a specific flag
