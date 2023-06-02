@@ -36,6 +36,10 @@ def request_image_page():
     user_query_for_image = str(request.args.get('image'))
     # /get_image/?category=CATEGORY_NAME&image=IMAGE_NAME
     image = f"https://raw.githubusercontent.com/lioraft/FlagsAPI/main/resources/{user_query_for_category}/{user_query_for_image}.png" # get the image
+    image_exists = requests.head(image) # check if image exists
+    # if image doesn't exist, put error message instead
+    if (image_exists.status_code != 200):
+        image = f"Error: {image_exists.status_code}"
     data = { 'Message': f'Got user request for {user_query_for_image} of {user_query_for_category} category successfully', 'Content': image}
     return json.dumps(data) # return the image as json
 
