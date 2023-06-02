@@ -16,7 +16,7 @@ def main_page():
 # Request page for all flags in a certain category
 @app.route('/get_category/', methods=['GET'])
 def request_category_page():
-    user_query = str(request.args.get('all')) # /get_category/?all_category=CATEGORY_NAME
+    user_query = str(request.args.get('all')) # /get_category/?all=CATEGORY_NAME
     # get the flags of requested category
     response = requests.get(f"https://api.github.com/repos/lioraft/FlagsAPI/contents/resources/{user_query}")
     # check if response is successful
