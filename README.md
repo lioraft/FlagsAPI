@@ -1,14 +1,14 @@
-# Flags, Logos, and Symbols API
-This is an API I created for flags, logos, banners, and symbols as PNG files.
+# Flags API
+This is an API I created for flags as PNG files.
 I know there are a lot of similar APIs out there. why use this one?
-- Very simple to use. two simple queries and you get the images you need.
+- Very simple to use. two simple queries and you get the flags you need.
 - I keep modifying this API based on my needs. 
-- Very useful if you're an Israeli: I try to include Israeli-related images.
+- Very useful if you're an Israeli: I try to include Israeli-related flags.
 
 How to use:
 
 1. Get all the images of category:
-Simple following query:
+Use the simple following query:
 https://827d-93-172-146-139.ngrok-free.app/get_category/?all={category}.
 You will get JSON in which "Content" is a list of all the URLs of PNG images in that category.
 
@@ -25,4 +25,4 @@ Current categories available:
 - US States: get  the flag of the state by its alpha2 code.
 
 Israeli related:
-- Israeli Coat of Arms: get the coat of arms of Israeli cities.
+- Israeli Governmental: get the flags of prime minister, president, and other ministries.
