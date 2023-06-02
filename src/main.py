@@ -1,12 +1,10 @@
-from flask import *
+from flask import Flask
+from flask import request
 import json
+import requests
 
-from src.get_by_request import getAllImagesOfCategory
 
 app = Flask(__name__)
-# Ngrok link:
-# https://827d-93-172-146-139.ngrok-free.app/
-
 
 # Main page
 @app.route('/', methods=['GET'])
@@ -19,8 +17,15 @@ def main_page():
 @app.route('/get_category/', methods=['GET'])
 def request_category_page():
     user_query = str(request.args.get('all')) # /user/?all_category=CATEGORY_NAME
-    images = getAllImagesOfCategory(user_query) # get all images of category
-    data = {'Message': f'Got user request for {user_query} category successfully', 'Content': images}
+    # get the flags of requested category
+    response = requests.get(f"https://api.github.com/repos/lioraft/FlagsAPI/contents/resources/{user_query}")
+    # check if response is successful
+    if response.status_code == 200:
+        contents = response.json() # get the contents of the response
+        png_files = [content["name"] for content in contents if content["name"].lower().endswith(".png")] # get the png files
+    else:
+        png_files = (f"Error: {response.status_code}")
+    data = {'Message': f'Got user request for {user_query} category successfully', 'Content': png_files}
     return json.dumps(data) # return the images as json
 
 # Request page for all flags in a certain category
@@ -30,7 +35,7 @@ def request_image_page():
     user_query_for_category = str(request.args.get('category'))
     user_query_for_image = str(request.args.get('image'))
     # /user/?category=CATEGORY_NAME&image=IMAGE_NAME
-    image = f"https://raw.githubusercontent.com/lioraft/FlagsLogosAPI/main/resources/{user_query_for_category}/{user_query_for_image}.png" # get the image
+    image = f"https://raw.githubusercontent.com/lioraft/FlagsAPI/main/resources/{user_query_for_category}/{user_query_for_image}.png" # get the image
     data = { 'Message': f'Got user request for {user_query_for_image} of {user_query_for_category} category successfully', 'Content': image}
     return json.dumps(data) # return the image as json
 
