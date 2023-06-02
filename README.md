@@ -25,5 +25,12 @@ Current categories available:
 - US States: get  the flag of the state by its alpha2 code.
 
 Israeli related:
-- Israeli Governmental: get the flags of prime minister, president, and other ministries.
-- Israeli Coat of Arms: get the coat of arms of cities in Israel.
+to access Israeli flags, the category should be israeli/{sub-category}. The flags are fully named:
+- Governmental
+- Coat of Arms
+- Historical
+- Municipalities
+- Organizations
+- Political Parties
+- Security Forces (IDF, Police, Fire and Rescue, etc)
+- Universities
