@@ -28,7 +28,7 @@ def request_category_page():
     data = {'Message': f'Got user request for {user_query} category successfully', 'Content': png_files}
     return json.dumps(data) # return the images as json
 
-# Request page for all flags in a certain category
+# Request page for a specific flag
 @app.route('/get_image/', methods=['GET'])
 def request_image_page():
     # get category and image from the URL path
