@@ -9,12 +9,12 @@ How to use:
 
 1. Get all the images of category:
 Use the simple following query:
-https://827d-93-172-146-139.ngrok-free.app/get_category/?all={category}.
+http://lioraft.pythonanywhere.com/get_category/?all={category}.
 You will get JSON in which "Content" is a list of all the URLs of PNG images in that category.
 
 2. Get a certain image of category:
 following query:
-https://827d-93-172-146-139.ngrok-free.app/get_image/?category={category}&image={image}.
+http://lioraft.pythonanywhere.com/get_image/?category={category}&image={image}.
 You will get JSON in which "Content" is the URL of the PNG image.
 
 Current categories available:
