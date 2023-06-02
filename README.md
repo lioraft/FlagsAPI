@@ -26,3 +26,4 @@ Current categories available:
 
 Israeli related:
 - Israeli Governmental: get the flags of prime minister, president, and other ministries.
+- Israeli Coat of Arms: get the coat of arms of cities in Israel.
