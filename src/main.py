@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Main page
 @app.route('/', methods=['GET'])
 def main_page():
-    data = {'Page': 'Main', 'Message': 'Welcome to flags and logos API!'}
+    data = {'Page': 'Main', 'Message': 'Welcome to flags API!'}
     return json.dumps(data)
 
 
