@@ -1,1 +1,20 @@
-Hello world!
+<!DOCTYPE html>
+<html lang = "en"> 
+    <head>
+        <title>Flags API</title>
+    </head>
+    <body>
+        <h1>About</h1>
+        <p>This is an API I created for flags as PNG files. It includes both international flags and Israeli flags.
+            Current international flags available: Countries, Pride, US States, Nautical, and International Organizations.
+            Current Israeli flags available: Governmental, Coat of Arms, Historical, Municipalities, Organizations, Security Forces (IDF, Police, Fire and Rescue, etc), and Universities.
+        </p>
+        <br>
+        <h2>How to use</h2>
+        <p>The response will be a JSON that includes the URL of requested images.
+            In order to get all the images of category, use the following query: http://lioraft.pythonanywhere.com/get_category/?all={category}. 
+            The content will be a list of all the URLs of PNG images in that category.
+            In order to get a certain image of category: following query: http://lioraft.pythonanywhere.com/get_image/?category={category}&image={image}. 
+            The content will be the URL of the requested PNG image.</p>
+    </body>
+</html>
