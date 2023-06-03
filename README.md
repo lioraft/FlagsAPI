@@ -1,23 +1,15 @@
 # Flags API
-This is an API I created for flags as PNG files.
-I know there are a lot of similar APIs out there. why use this one?
-- Very simple to use. two simple queries and you get the flags you need.
-- I keep modifying this API based on my needs. 
-- Very useful if you're an Israeli: I try to include Israeli-related flags.
+This is an API I created for flags as PNG files. It includes both international flags and Israeli flags.
 
 How to use:
 
-1. Get all the images of category:
-Use the simple following query:
-http://lioraft.pythonanywhere.com/get_category/?all={category}.
-You will get JSON in which "Content" is a list of all the URLs of PNG images in that category.
+The response will be a JSON that includes the URL of requested images.
 
-2. Get a certain image of category:
-following query:
-http://lioraft.pythonanywhere.com/get_image/?category={category}&image={image}.
-You will get JSON in which "Content" is the URL of the PNG image.
+In order to get all the images of category, use the following query: http://lioraft.pythonanywhere.com/get_category/?all={category}.
+The content will be a list of all the URLs of PNG images in that category.
 
-An example of usage in my own project: https://github.com/lioraft/FlagsQuiz
+In order to get a certain image of category, use the following query: http://lioraft.pythonanywhere.com/get_image/?category={category}&image={image}.
+The content will be the URL of the requested PNG image.
 
 Current categories available:
 - Countries: get the flag of the country by its alpha2 code.
