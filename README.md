@@ -17,6 +17,8 @@ following query:
 http://lioraft.pythonanywhere.com/get_image/?category={category}&image={image}.
 You will get JSON in which "Content" is the URL of the PNG image.
 
+An example of usage in my own project: https://github.com/lioraft/FlagsQuiz
+
 Current categories available:
 - Countries: get the flag of the country by its alpha2 code.
 - Pride: get pride flags by the sexual orientation/gender identity they represent.
