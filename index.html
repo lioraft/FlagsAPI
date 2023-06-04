@@ -16,8 +16,8 @@
                 background: linear-gradient(#adceff, #5c8aff);
                 margin: 0;
                 padding: 0;
-                height: 100%;
-                overflow: hidden;
+                height: 100vh;
+                overflow: auto;
             }
 
             ul {
@@ -160,9 +160,9 @@
         <h3>How to use</h3>
         <p>The response will be a JSON that includes the URL of requested images.<br>
             <ul>
-                <li>In order to get all the images of category, use the following query: /get_category/?all={category}.<br>
+                <li>In order to get all the images of category, use the following query: <br>/get_category/?all={category}.<br>
             The content will be a list of all the URLs of PNG images in that category.</li>
-            <li>In order to get a certain image of category: following query: /get_image/?category={category}&image={image}.<br>
+            <li>In order to get a certain image of category, use the following query:<br> /get_image/?category={category}&image={image}.<br>
             The content will be the URL of the requested PNG image.</li>
             </ul>
             <a class="link-box" href="http://lioraft.pythonanywhere.com">Proceed to API</a>
