@@ -6,6 +6,7 @@
             html { /* set height for whole page*/
                 height: 100%;
             }
+            /* theme for design is blue colors, similar to israel's flag*/
             body {
                 display: flex;
                 justify-content: center;
@@ -16,6 +17,17 @@
                 padding: 0;
                 height: 100%;
                 overflow: hidden;
+            }
+
+            ul {
+                list-style-type: disc;
+                margin-left: 20px;
+                font-family: 'Trebuchet MS', sans-serif;
+            }
+            
+            ul li {
+                margin-bottom: 5px;
+                font-family: 'Trebuchet MS', sans-serif;
             }
     
             h1, h2, h3, p {
@@ -62,11 +74,53 @@
             margin-bottom: 20px;
             max-width: 600px;
             width: 100%;
-            }          
+            }
+            
+        /* scrollbar design, themed as web page */
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+        /* scrollbar thumb */
+        ::-webkit-scrollbar-thumb {
+            background-color: #007bff;
+        }
+
+        /* scrollbar on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #0056b3;
+        }
+
+        /* scrollbar when active */
+        ::-webkit-scrollbar-thumb:active {
+            background-color: #003080;
+        }
+        
+        /* scrollbar corner */
+        ::-webkit-scrollbar-corner {
+            background-color: #f1f1f1;
+        }
+        
+        /* disable scrollbar shadow */
+        ::-webkit-scrollbar {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        
+        /* hide scrollbar buttons */
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+        
+        /* hide scrollbar resizer */
+        ::-webkit-scrollbar-resizer {
+            display: none;
+        }
         </style>
         <title>Flags API</title>
     </head>
     <body>
+        <div class="scrollable-content">
         <img class="banner" src="https://raw.githubusercontent.com/lioraft/FlagsAPI/main/icon_200.png" alt="Banner" width="200">
         <br>
         <div class="paragraph-box">
@@ -108,5 +162,6 @@
         </p>
         </div>
         <a class="link-box" href="https://github.com/lioraft">Check out my GitHub</a>
+    </div>
     </body>
 </html>
