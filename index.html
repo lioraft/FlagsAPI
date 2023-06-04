@@ -18,18 +18,13 @@
                 overflow: hidden;
             }
     
-            h1, h2, p {
+            h1, h2, h3, p {
                 text-align: center;
                 margin: 10px 0;
                 font-family: 'Trebuchet MS', sans-serif;
             }
     
-            h1 {
-                font-size: 32px;
-                font-weight: bold;
-            }
-    
-            h2 {
+            h1, h2, h3 {
                 font-size: 28px;
                 font-weight: bold;
             }
@@ -44,7 +39,7 @@
                 height: 200px;
                 object-fit: cover;
             }
-            .github-box {
+            .link-box {
             display: inline-block;
             padding: 10px 15px;
             color: #fff;
@@ -54,7 +49,7 @@
             text-decoration: none;
             }
 
-        .github-box:hover {
+        .link-box:hover {
             background-color: #052466;
             }
         .paragraph-box {
@@ -75,20 +70,43 @@
         <img class="banner" src="https://raw.githubusercontent.com/lioraft/FlagsAPI/main/icon_200.png" alt="Banner" width="200">
         <br>
         <div class="paragraph-box">
-        <h1>About</h1>
-        <p>This is an API I created for flags as PNG files. It includes both international flags and Israeli flags.<br>
-            Current international flags available: Countries, Pride, US States, Nautical, and International Organizations.<br>
-            Current Israeli flags available: Governmental, Coat of Arms, Historical, Municipalities, Organizations, Security Forces (IDF, Police, Fire and Rescue, etc), and Universities.
-        </p>
+            <h1>About</h1>
+            <p>This is an API I created for flags as PNG files. It includes both international flags and Israeli flags.</p>
         </div>
         <br>
         <div class="paragraph-box">
-        <h2>How to use</h2>
+            <h2>Current international flags available:</h2>
+            <ul>
+              <li>Countries</li>
+              <li>Pride</li>
+              <li>US States</li>
+              <li>Nautical</li>
+              <li>International Organizations</li>
+            </ul>
+            <h2>Current Israeli flags available:</h2>
+            <ul>
+              <li>Governmental</li>
+              <li>Coat of Arms</li>
+              <li>Historical</li>
+              <li>Municipalities</li>
+              <li>Organizations</li>
+              <li>Security Forces (IDF, Police, Fire and Rescue, etc)</li>
+              <li>Universities</li>
+            </ul>
+        </div>
+        <br>
+        <div class="paragraph-box">
+        <h3>How to use</h3>
         <p>The response will be a JSON that includes the URL of requested images.<br>
-            In order to get all the images of category, use the following query: http://lioraft.pythonanywhere.com/get_category/?all={category}.<br>
-            The content will be a list of all the URLs of PNG images in that category.<br>
-            In order to get a certain image of category: following query: http://lioraft.pythonanywhere.com/get_image/?category={category}&image={image}.<br>
-            The content will be the URL of the requested PNG image.</p></div>
-        <a class="github-box" href="https://github.com/lioraft">My GitHub</a>
+            <ul>
+                <li>In order to get all the images of category, use the following query: /get_category/?all={category}.<br>
+            The content will be a list of all the URLs of PNG images in that category.</li>
+            <li>In order to get a certain image of category: following query: /get_image/?category={category}&image={image}.<br>
+            The content will be the URL of the requested PNG image.</li>
+            </ul>
+            <a class="link-box" href="http://lioraft.pythonanywhere.com">Proceed to API</a>
+        </p>
+        </div>
+        <a class="link-box" href="https://github.com/lioraft">Check out my GitHub</a>
     </body>
 </html>
