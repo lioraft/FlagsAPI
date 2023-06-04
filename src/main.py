@@ -1,14 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 import json
 import requests
 
+# This code is hosted in PythonAnywhere, so the port is not needed
 
 app = Flask(__name__)
 
 # Main page
 @app.route('/')
-def index():
-    return render_template('index.html')
+def main_page():
+    data = {'Page': 'Main', 'Message': 'Welcome to flags API!'}
+    return json.dumps(data)
 
 
 # Request page for all flags in a certain category
@@ -43,5 +45,5 @@ def request_image_page():
     data = { 'Message': f'Got user request for {user_query_for_image} of {user_query_for_category} category successfully', 'Content': image}
     return json.dumps(data) # return the image as json
 
-if __name__ == '__main__':
-    app.run(port=5555)
+#if __name__ == '__main__':
+#   app.run(port=5555)
