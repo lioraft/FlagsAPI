@@ -2,9 +2,44 @@
 <html lang="en"> 
     <head>
         <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, sans-serif;
+                background-color: #9b9b9b; /*background color*/
+            }
+    
+            h1, h2, p {
+                text-align: center;
+                margin: 10px 0;
+            }
+    
+            h1 {
+                font-size: 32px;
+                font-weight: bold;
+            }
+    
+            h2 {
+                font-size: 28px;
+                font-weight: bold;
+            }
+    
+            p {
+                font-size: 18px;
+            }
+    
+            .banner {
+                width: 100%;
+                max-width: 800px;
+            }
+        </style>
         <title>Flags API</title>
     </head>
     <body>
+        <img class="banner" src="https://raw.githubusercontent.com/lioraft/FlagsAPI/main/icon_200.png" alt="Banner">
         <h1>About</h1>
         <p>This is an API I created for flags as PNG files. It includes both international flags and Israeli flags.<br>
             Current international flags available: Countries, Pride, US States, Nautical, and International Organizations.<br>
