@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import request
+from flask import Flask, render_template, request
 import json
 import requests
 
@@ -7,10 +6,9 @@ import requests
 app = Flask(__name__)
 
 # Main page
-@app.route('/', methods=['GET'])
-def main_page():
-    data = {'Page': 'Main', 'Message': 'Welcome to flags API!'}
-    return json.dumps(data)
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 # Request page for all flags in a certain category
