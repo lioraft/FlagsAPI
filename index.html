@@ -1,77 +1,36 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            html { /* set height for whole page*/
-                height: 100%;
-            }
-            /* theme for design is blue colors, similar to israel's flag*/
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background: linear-gradient(#adceff, #5c8aff);
-                margin: 0;
-                padding: 0;
-                height: 100vh;
-                overflow: auto;
-            }
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background: linear-gradient(#cddbf0, #91aae9);
+            margin: 0;
+            padding: 0;
+        }
 
-            ul {
-                list-style-type: disc;
-                margin-left: 20px;
-                font-family: 'Trebuchet MS', sans-serif;
-            }
-            
-            ul li {
-                margin-bottom: 5px;
-                font-family: 'Trebuchet MS', sans-serif;
-            }
-    
-            h1, h2, h3, p {
-                text-align: center;
-                margin: 10px 0;
-                font-family: 'Trebuchet MS', sans-serif;
-            }
-    
-            h1, h3 {
-                font-size: 28px;
-                font-weight: bold;
-            }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
-            h2 {
-                font-size: 20px;
-                font-weight: bold;
-            }
-    
-            p {
-                font-size: 18px;
-                text-align: left;
-            }
-    
-            .banner {
-                width: 200px;
-                height: 200px;
-                object-fit: contain;
-            }
-            .link-box {
-            display: inline-block;
-            padding: 10px 15px;
-            color: #fff;
-            background-color: #133da7;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            }
+        .header {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
-        .link-box:hover {
-            background-color: #052466;
-            }
-        .paragraph-box {
-            display: inline-block;
-            padding: 15px;
+        .sub-header {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content {
             background-color: #ffffff;
             color: #000285;
             border-radius: 5px;
@@ -79,22 +38,37 @@
             margin-bottom: 20px;
             max-width: 600px;
             width: 100%;
-            }
-        
-        /* scrollbar design, themed as web page */
-        .scrollable-content {
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        scrollbar-width: thin;
-        scrollbar-color: #007bff #f1f1f1;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        padding-top: 400px;
+            padding: 15px;
         }
-            
+
+        .link {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #133da7;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            background-color: #052466;
+        }
+
+        /* Scrollbar design */
+        .scrollable-content {
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #007bff #f1f1f1;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding-top: 400px;
+        }
+
         .scrollable-content::-webkit-scrollbar-track {
             background-color: #f1f1f1;
         }
@@ -110,71 +84,71 @@
         .scrollable-content::-webkit-scrollbar-thumb:active {
             background-color: #003080;
         }
-        
+
         .scrollable-content::-webkit-scrollbar-corner {
             background-color: #f1f1f1;
         }
-        
+
         .scrollable-content::-webkit-scrollbar {
             -webkit-box-shadow: none;
             box-shadow: none;
         }
-        
+
         .scrollable-content::-webkit-scrollbar-button {
             display: none;
         }
-        
+
         .scrollable-content::-webkit-scrollbar-resizer {
             display: none;
         }
-        </style>
+    </style>
     <title>Flags API</title>
-    </head>
-    <body>
-        <div class="scrollable-content">
-        <img class="banner" src="https://raw.githubusercontent.com/lioraft/FlagsAPI/main/icon_200.png" alt="Banner" width="200">
-        <br>
-        <div class="paragraph-box">
-            <h1>About</h1>
+</head>
+<body>
+<div class="scrollable-content">
+    <img class="banner" src="https://raw.githubusercontent.com/lioraft/FlagsAPI/main/icon_200.png" alt="Banner" width="200">
+    <div class="container">
+        <div class="content">
+            <h1 class="header">About</h1>
             <p>This is an API I created for flags as PNG files. It includes both international flags and Israeli flags.</p>
         </div>
-        <br>
-        <div class="paragraph-box">
-            <h2>Current international flags available:</h2>
+
+        <div class="content">
+            <h2 class="sub-header">Current international flags available:</h2>
             <ul>
-              <li>Countries</li>
-              <li>Pride</li>
-              <li>US States</li>
-              <li>Nautical</li>
-              <li>International Organizations</li>
+                <li>Countries</li>
+                <li>Pride</li>
+                <li>US States</li>
+                <li>Nautical</li>
+                <li>International Organizations</li>
             </ul>
-            <h2>Current Israeli flags available:</h2>
+            <h2 class="sub-header">Current Israeli flags available:</h2>
             <ul>
-              <li>Governmental</li>
-              <li>Coat of Arms</li>
-              <li>Historical</li>
-              <li>Municipalities</li>
-              <li>Organizations</li>
-              <li>Security Forces (IDF, Police, Fire and Rescue, etc)</li>
-              <li>Universities</li>
+                <li>Governmental</li>
+                <li>Coat of Arms</li>
+                <li>Historical</li>
+                <li>Municipalities</li>
+                <li>Organizations</li>
+                <li>Security Forces (IDF, Police, Fire and Rescue, etc)</li>
+                <li>Universities</li>
             </ul>
         </div>
-        <br>
-        <div class="paragraph-box">
-        <h3>How to use</h3>
-        <p>The response will be a JSON that includes the URL of requested images.<br>
+
+        <div class="content">
+            <h3 class="sub-header">How to use</h3>
+            <p>The response will be a JSON that includes the URL of requested images.
             <ul>
-                <li>In order to get all the images of category, use the following query: <br>/get_category/?all={category}.<br>
-            The content will be a list of all the URLs of PNG images in that category.</li>
-            <li>In order to get a certain image of category, use the following query:<br> /get_image/?category={category}&image={image}.<br>
-            The content will be the URL of the requested PNG image.</li>
+                <li>In order to get all the images of a category, use the following query: <br>/get_category/?all={category}.<br>
+                    The content will be a list of all the URLs of PNG images in that category.</li>
+                <li>In order to get a certain image of a category, use the following query:<br> /get_image/?category={category}&image={image}.<br>
+                    The content will be the URL of the requested PNG image.</li>
             </ul>
-            <a class="link-box" href="http://lioraft.pythonanywhere.com">Proceed to API</a>
-        </p>
+            <a class="link" href="http://lioraft.pythonanywhere.com">Proceed to API</a>
+            </p>
         </div>
-        <br>
-        <br>
-        <a class="link-box" href="https://github.com/lioraft">Check out my GitHub</a><br><br>
     </div>
-    </body>
+
+    <a class="link" href="https://github.com/lioraft">Check out my GitHub</a>
+</div>
+</body>
 </html>
